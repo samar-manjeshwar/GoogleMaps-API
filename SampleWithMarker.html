@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var MarinaCt = {lat: 37.550947 ,
+              lng: -122.285839};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: MarinaCt
+        });
+        var marker = new google.maps.Marker({
+          position: MarinaCt,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaKEPsj3fYiOkumj0oG-cftXcuY2m-W7c&callback=initMap">
+    </script>
+  </body>
+</html>
